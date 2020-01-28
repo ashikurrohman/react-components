@@ -7,9 +7,33 @@
     <meta name="theme-color" content="#000000" />
     <title>React App</title>
   </head>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@16/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+  ></script>
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <body>
-<div id="root"></div>
- 
-    
+    <div id="root">
+      <script type="text/babel">
+        class Home extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {
+              name: "Ashikur Rohman",
+              roll: 65
+            };
+          }
+          render() {
+            return <h1>My name is {this.state.name}</h1>;
+          }
+        }
+        ReactDOM.render(<Home />, document.getElementById("root"));
+      </script>
+    </div>
   </body>
 </html>
