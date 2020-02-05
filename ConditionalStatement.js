@@ -10,11 +10,16 @@ export class Myapp extends Component {
         }
     }
     render() {
+       
      if(this.state.values){
-         return <div>Hello you are logged in</div>
+        
+         const result = <div>you are logged in</div>
+         return <div><h1>Hello, {result}</h1></div>
      }else{
-         return <div>You are not logged in</div>
+         const result =  <div>Register Form Here</div>
+         return <div><h1>Hello, {result}</h1></div>
      }
+    
     }
 }
 
