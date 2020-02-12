@@ -13,6 +13,7 @@ export default class Form extends Component {
     }
     formSubmit=(event)=>{
         alert(`My name is ${this.state.name}`)
+        event.preventDefault();
      }
     render() {
         return(
