@@ -1,32 +1,29 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react'
 
-export default class IncDec extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            count:10
+export default class Counter extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            counts:0
         }
     }
-    increase=()=>{
+    Increment(){
         this.setState({
-            count:this.state.count +1
+            counts:this.state.counts + 1
         })
-        
     }
-    deccrease = () => {
+    Decrement(){
         this.setState({
-            count:this.state.count -1
+            counts:this.state.counts -1
         })
-        
     }
     render() {
         return (
             <div>
-                <button onClick={this.deccrease}>Decrase</button>
-                <h1>Click here to Change Data : {this.state.count}</h1>
-                <button onClick={this.increase}>Incrase</button>
+                <h1>Count Number : {this.state.counts}</h1>
+                <button onClick={()=>this.Increment()}>Increment</button>  
+                <button onClick={()=>this.Decrement()}>Decrement</button>
             </div>
         )
     }
 }
-
