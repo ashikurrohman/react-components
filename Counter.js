@@ -1,19 +1,23 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-
-class Mytuts extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "Ashikur Rohman",
-      roll: 65
+export default class Counter extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            counts:0
+        }
     }
-  }
-  render() {
-    return (
-      <h1>My name is {this.state.name}</h1>
-    )
-  }
+    ChangeData(){
+        this.setState({
+            counts:this.state.counts + 1
+        })
+    }
+    render() {
+        return (
+            <div>
+                <h1>Count Number : {this.state.counts}</h1>
+                <button onClick={()=>this.ChangeData()}>Subscribe</button>
+            </div>
+        )
+    }
 }
-
-export default Mytuts;
