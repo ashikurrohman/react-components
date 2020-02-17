@@ -1,19 +1,43 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Myapp extends Component {
-   state=
-   { Myarr: [
-        {id:1,name:"Ashik",age:22},
-        {id:2,name:"Rakib",age:12},
-        {id:3,name:"Shofiq",age:32},
+function Counter() {
+    const persons =[
+        {   id:1,
+            name:"Ashik",
+            age:23,
+            skill:React
+    },   
+     {      id:2,
+            name:"Pentester",
+            age:24,
+            skill:"JavaScript"
+    },  
+      {     id:3,
+            name:"Betler",
+            age:28,
+            skill:"Python"
+    }, 
+       {    id:4,
+            name:"Rahul",
+            age:33,
+            skill:"Java"
+    }
     ]
-}
+ 
+    const Person = persons.map(person=>(
+      
+    <h5>Hi i am {person.name}. I am {person.age} Years Old.</h5>
    
-    render(){
-        return(
-            <div>
-               {this.state.Myarr.map((item)=><div>{item.name}=>{item.age}</div>)}
-            </div>
-        )
+    ))
+   
+    return (
+    <div>
+         <ul>
+                 {Person}
+         </ul> <br />
+          <ul>
+                 {Person}
+         </ul>
+    </div>)
 }
-}
+export default Counter;
